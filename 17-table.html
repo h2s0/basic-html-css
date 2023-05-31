@@ -11,6 +11,8 @@
     
     <h1>과목별 테스트 결과</h1>
     <table border="1">
+        <!-- thead, tbody, tfoot 을 줘서 순서를 줄 수 있음 -->
+
         <thead>
             <tr>
                 <th>과목명</th>
@@ -19,22 +21,25 @@
                 <th scope="col">React</th>
             </tr>
         </thead>
+
         <tfoot>
-        <tr>
-            <th scope="row">금윤호</th>
-            <td>100</td>
-            <td>95</td>
-            <td>98</td>
-        </tr>
+            <tr>
+                <th scope="row">금윤호</th>
+                <td>100</td>
+                <td>95</td>
+                <td>98</td>
+            </tr>
         </tfoot>
+
         <tbody>
-        <tr>
-            <th scope="row">범쌤</th>
-            <td>97</td>
-            <td>100</td>
-            <td>99</td>
-        </tr>
+            <tr>
+                <th scope="row">범쌤</th>
+                <td>97</td>
+                <td>100</td>
+                <td>99</td>
+            </tr>
         </tbody>
+        
         <tr>
             <th scope="row">김희소</th>
             <td>80</td>
@@ -46,9 +51,10 @@
     <p id="tableDesc">
         프론트엔드 관련 기술 시험 결과를 나타낸 표 입니다.
     </p>
+    
     <!-- 밖에 있는 요약 정보와 테이블을 연결 해주는 것. aria-describedby
     
-    설명을 직접 주려면 aria-describtin 으로 주면 됨-->
+    설명을 직접 주려면 aria-describtin 으로 주면 됨 -->
 
     <table border="1" summary="표의 요약 정보" aria-describedby="tableDesc">
         <tr>
