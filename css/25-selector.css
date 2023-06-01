@@ -22,13 +22,59 @@ body {
     text-shadow: 4px 4px 3px #77f;
 }
 
+.align {
+    text-align: center;
+}
+
 ul.menu {
     margin: 0;
     padding-left: 0;
-    color: #f00;
+    color: #eee;
 }
 
 /* 아이디 선택자 */
 #demo {
-    border: red 5px solid;
+    border: yellowgreen 5px solid;
 }
+
+/* 속성 선택자
+html 로 끝나는 것만 선택
+띄어쓰기 한 것은 자손 결합자*/
+.menu a[href$=".html"] {
+    background-color: blueviolet;
+}
+
+/* 선택자 목록 */
+.fancy, .menu{
+    font-size: 22px;
+}
+
+/* 가상 요소 선택자 */
+
+/* 드래그 할 때 변화 */
+::selection {
+    background-color: hotpink;
+    color: antiquewhite;
+}
+
+.align::before {
+    content: "이전 요소";
+}
+
+.align::after {
+    content: "다음 요소";
+}
+
+/* 가상 클래스 - 구조 선택자의 일종 */
+.menu li:nth-child(odd) {
+    color: pink;
+}
+
+.menu a:hover{
+    border: 5px solid orange;
+}
+
+h1.menu:hover, h1.menu:focus{
+    background-color: plum;
+}
+
